@@ -1,0 +1,51 @@
+.ErrorPageWrap {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ErrorImageWrap {
+    margin: 0 auto 32px;
+    max-width: 30rem;
+    
+}
+
+.ErrorPageNav {
+    position: relative;
+    overflow: hidden;
+    
+    a {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        font-size: 18px;
+
+        span {
+            display: block;
+            transition: all ease 0.4s;
+    
+            &.linkTextHover {
+                position: absolute;
+                top: 0;
+                opacity: 0;
+                transform: translateY(100%);
+            }
+        }
+    
+        &:hover {
+            .linkTextHover {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            .linkText {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+        }
+    }
+
+    
+}
