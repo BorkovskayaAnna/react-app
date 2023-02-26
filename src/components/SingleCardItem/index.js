@@ -1,11 +1,9 @@
 import React from 'react'
-import classnames from 'classnames'
 import style from "./SingleCardItem.module.scss";
 import defaultImg from "../../assets/images/card-default.jpeg";
 
 export const SingleCardItem = ({card}) => (
   <div className="container">
-    {console.log(card)}
     <div className={style.cardWrap}>
       <div className={style.imageWrap}>
         <img

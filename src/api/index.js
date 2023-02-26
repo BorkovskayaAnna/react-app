@@ -28,6 +28,6 @@ export const fetchData = async (
 }
 
 export const fetchSingleData = async ( id ) => {
-  const res = await fetch(`${REACT_APP_ID_API_URL}/${id}`);
+  const res = await fetch(`${REACT_APP_ID_API_URL}/${id}`)
   return res.json();
 }

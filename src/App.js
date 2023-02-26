@@ -1,13 +1,15 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CardPage } from './scenes/CardPage'
 import { SingleCardPage } from './scenes/SingleCardPage'
-import { BrowserRouter,Routes, Route } from 'react-router-dom'
+import { ErrorPage } from './scenes/ErrorPage'
 
-function App() {
+const App = () => {
   return (
    <BrowserRouter>
     <Routes>
-      <Route path="/" element={ <CardPage/>} />
-      <Route path="/card/:id" element={<SingleCardPage/>} />
+      <Route exact path="/" element={ <CardPage/>} />
+      <Route exact path="/card/:id" element={ <SingleCardPage/> } />
+      <Route path="*" element={ <ErrorPage /> } status={404} />
     </Routes>
    </BrowserRouter>
   )
