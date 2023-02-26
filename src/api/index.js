@@ -1,4 +1,4 @@
-const { REACT_APP_BASE_API_URL, REACT_APP_CARDS_PER_PAGE } = process.env;
+const { REACT_APP_BASE_API_URL, REACT_APP_CARDS_PER_PAGE, REACT_APP_ID_API_URL } = process.env;
 
 export const fetchData = async (
     currentPage,
@@ -24,5 +24,10 @@ export const fetchData = async (
     )
   }
   const res = await fetch(REACT_APP_BASE_API_URL, options);
+  return res.json();
+}
+
+export const fetchSingleData = async ( id ) => {
+  const res = await fetch(`${REACT_APP_ID_API_URL}/${id}`);
   return res.json();
 }
