@@ -5,8 +5,14 @@
     font-family: Arial, sans-serif;
 }
 
+html,
+body {
+    min-height: 100vh;
+}
+
 body {
     margin: 0;
+    color: #2a2828;
 }
 
 .container-lg {
@@ -28,6 +34,22 @@ body {
 p {
     margin: 0 0 10px;
     line-height: 24px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
 }
 
 .grid {
