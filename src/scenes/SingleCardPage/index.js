@@ -15,7 +15,7 @@ export const SingleCardPage = () => {
     .then(data => setCard(data))
     .finally(() => setLoading(false))
   }, [card.id, id])
-  
+  console.log(id, ' ', card.id)
   return (
     <>
     {loading 
