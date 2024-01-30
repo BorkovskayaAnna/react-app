@@ -8,7 +8,6 @@ import { Loading } from '../../components/Loading'
 export const SingleCardPage = () => {
 	const { id } = useParams();
   const [card, setCard] = useState([]);
-  const [loading, setLoading] = useState(true)
 
 	useEffect(() => {
     fetchSingleData(id)
@@ -17,7 +16,7 @@ export const SingleCardPage = () => {
   }, [card.id, id])
 
   if(!card.id) {
-    return <Loading/>
+    return <Loading />
   }
 
   console.log(card.id)
