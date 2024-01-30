@@ -21,8 +21,7 @@ export const SingleCardPage = () => {
     {loading 
     ? <Loading />
     : card.id === id
-    ? <SingleCardItem card={card} />
-    : <ErrorPage />
+    && <SingleCardItem card={card} />
     }
     </>
   )
