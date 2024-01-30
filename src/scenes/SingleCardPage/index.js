@@ -15,15 +15,17 @@ export const SingleCardPage = () => {
     .then(data => setCard(data))
     .finally(() => setLoading(false))
   }, [card.id, id])
-  
+
+  if(!card.id) {
+    return <Loading/>
+  }
+
+  console.log(card.id)
   return (
     <>
-    {loading 
-    ? <Loading />
-    : !card 
-    ? <ErrorPage />
-    : card?.id === id
-    && <SingleCardItem card={card} />
+    {card.id === id
+    ? <SingleCardItem card={card} />
+    : <ErrorPage />
     }
     </>
   )
