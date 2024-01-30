@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { fetchSingleData } from '../../api'
 import { SingleCardItem } from '../../components/SingleCardItem'
-import { ErrorPage} from '../../scenes/ErrorPage'
+// import { ErrorPage} from '../../scenes/ErrorPage'
 import { Loading } from '../../components/Loading'
 
 export const SingleCardPage = () => {
