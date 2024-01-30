@@ -15,12 +15,12 @@ export const SingleCardPage = () => {
     .then(data => setCard(data))
     .finally(() => setLoading(false))
   }, [card.id, id])
-  console.log(id, ' ', card.id)
+  console.log(card)
   return (
     <>
     {loading 
     ? <Loading />
-    : card.id === id
+    : card?.id === id
     && <SingleCardItem card={card} />
     }
     </>
