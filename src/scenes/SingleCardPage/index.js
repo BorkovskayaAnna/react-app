@@ -13,7 +13,6 @@ export const SingleCardPage = () => {
 	useEffect(() => {
     fetchSingleData(id)
     .then(data => setCard(data))
-    .then(console.log(card))
     .then(console.log(card.id))
     // .finally(() => setLoading(false))
   }, [card.id, id])
