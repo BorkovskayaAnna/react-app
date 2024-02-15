@@ -21,6 +21,7 @@ export const SingleCardPage = () => {
   }
 
   console.log(card.id)
+  
   return (
     <>
     {card.id === id
