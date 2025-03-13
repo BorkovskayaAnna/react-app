@@ -9,7 +9,7 @@ const App = () => {
     <Routes>
       <Route exact path="/" element={ <CardPage/>} />
       <Route exact path="/card/:id" element={ <SingleCardPage/> } />
-      <Route path="*" element={ <ErrorPage /> } status={404} />
+      <Route path="/card" element={ <ErrorPage /> } status={404} />
     </Routes>
    </BrowserRouter>
   )
